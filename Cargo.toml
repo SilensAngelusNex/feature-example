@@ -1,0 +1,15 @@
+[package]
+name = "my-crate"
+version = "0.1.0"
+edition = "2018"
+resolver = "2"
+
+[features]
+default = ["test-helper/default"]
+foo = ["test-helper/foo"]
+
+[dev-dependencies]
+test-helper = { path = "tests/helper", default-features = false }
+
+[workspace]
+members = ["tests/helper"]

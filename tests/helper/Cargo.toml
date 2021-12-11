@@ -1,0 +1,12 @@
+[package]
+name = "test-helper"
+version = "0.1.0"
+edition = "2018"
+resolver = "2"
+
+[features]
+default = ["my-crate/default"]
+foo = ["my-crate/foo"]
+
+[dependencies]
+my-crate = { path = "../..", default-features = false}
